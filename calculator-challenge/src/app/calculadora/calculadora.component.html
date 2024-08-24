@@ -1,0 +1,20 @@
+<div class="calculator">
+    <h2>calculadora</h2>
+    <label for="valor1">Valor 1</label>
+    <input [(ngModel)]="valor1" placeholder="Ingrese el primer valor" type="number">
+
+    <label for="valor2">Valor 2</label>
+    <input [(ngModel)]="valor2" placeholder="Ingrese el segundo valor" type="number">
+
+    <button (click)="operar('+')">+</button>
+    <button (click)="operar('-')">-</button>
+    <button (click)="operar('*')">*</button>
+    <button (click)="operar('/')">/</button>
+    <button (click)="operar('^')">^</button>
+    <button (click)="operar('sqrt')">√</button>
+    <button (click)="operar('limpiar()')">CE</button>
+
+    <div *ngIf="resultado != null">
+        <h3>Resultado: {{ resultado }}</h3>
+    </div>
+</div>
